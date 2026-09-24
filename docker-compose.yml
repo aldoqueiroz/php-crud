@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: php-crud
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./data:/var/www/data
+    restart: unless-stopped
